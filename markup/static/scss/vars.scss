@@ -1,0 +1,16 @@
+/* stylelint-disable scss/at-rule-no-unknown */
+// Colors
+$primary-color: #a07b50 !default;
+
+$body-bg-primary: #181617 !default;
+$body-bg-secondary: #1f1c1d !default;
+$body-bg-tertiary: #a07b50 !default;
+$body-color: #fff !default;
+
+// Typography
+$main-font: Roboto, Verdana, Arial, Helvetica, sans-serif !default;
+$headings-font: "Yeseva One", Times, "Times New Roman", Georgia, serif !default;
+
+// http://lostgrid.org/
+@lost flexbox flex;
+@lost gutter 0;

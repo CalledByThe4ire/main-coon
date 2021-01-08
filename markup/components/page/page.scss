@@ -1,0 +1,14 @@
+.page {
+  display: block;
+  width: inherit;
+  max-width: map-get($map: $breakpoints, $key: desktop);
+  height: inherit;
+  margin: auto;
+  font-family: $main-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  color: $body-color;
+  background-color: $body-bg-primary;
+}
