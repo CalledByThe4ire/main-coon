@@ -22,8 +22,3 @@
   padding-top: $padding;
   padding-bottom: $padding;
 }
-
-@mixin icon-colors($fallback: black) {
-  fill: $fallback;
-  @content;
-}
