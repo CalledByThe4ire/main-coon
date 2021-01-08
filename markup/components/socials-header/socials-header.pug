@@ -1,0 +1,9 @@
+mixin socials-header(data)
+	+b('div').socials-header&attributes(attributes)
+		+e('ul').list
+			each value in data
+				- const { name, width: iconWidth, height: iconHeight, href } = value;
+
+				+e('li').item
+					+e('a').link(href= href)
+						!= pugHelpers.Icon.call(locals, {iconName: name, className: `socials-header__icon socials-header__icon--${name}`, iconWidth, iconHeight})

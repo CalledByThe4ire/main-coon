@@ -1,0 +1,9 @@
+mixin info-header(data)
+	- const { title, location, description } = data;
+	- console.log(data);
+
+	+b('div').info-header&attributes(attributes)
+		+e('span').location= location
+		+e('h1').title !{title}
+		+e(p).description !{description}
+		+e('button').button(type='button').button__ Смотреть котиков

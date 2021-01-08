@@ -1,3 +1,16 @@
-mixin header(data)
+include ../socials-header/socials-header.pug
+include ../info-header/info-header.pug
+
+mixin header({ socials })
 	+b('div').header&attributes(attributes)
-		block
+		+e('div').container
+			+e('a').link(href='#')
+				!= pugHelpers.Icon.call(locals, {iconName: 'crown', className: 'header__icon', iconWidth: '50', iconHeight: '22'})
+
+			+info-header(infoHeader)(class='header__info')
+			+socials-header(socials)(class='header__socials')
+
+		picture
+				source(media='(max-width: 767px)', srcset="%=static=%img/assets/header/ginger-phone.png, %=static=%img/assets/header/ginger-phone@2x.png 2x")
+				source(media='(max-width: 1365px)', srcset="%=static=%img/assets/header/ginger-tablet.png, %=static=%img/assets/header/ginger-tablet@2x.png 2x")
+				+e('image').image(src="%=static=%img/assets/header/ginger-desktop.png", srcset="%=static=%img/assets/header/ginger-desktop@2x.png 2x", alt="Ginger")

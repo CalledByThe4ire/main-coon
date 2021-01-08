@@ -1,0 +1,86 @@
+.socials-header {
+  position: relative;
+  display: block;
+  transition: all 0.5s;
+
+  @include media(">=desktop") {
+    margin-bottom: -95px;
+    transform: translateY(-95px);
+  }
+}
+
+.socials-header__list {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 450px;
+  transition: inherit;
+
+  @include media(">=desktop") {
+    padding-top: 95px;
+    transform: translateX(-10px);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: none;
+    width: 1px;
+    height: 70px;
+    content: "";
+    background-color: #fff;
+    opacity: 0.6;
+    transform: translate(-50%);
+
+    @include media(">=desktop") {
+      display: block;
+    }
+  }
+
+  @include media("<=tablet") {
+    display: none;
+  }
+
+  @include media(">=desktop") {
+    display: inline-flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-right: auto;
+  }
+}
+
+.socials-header__item {
+  transition: inherit;
+}
+
+.socials-header__item:not(:last-child) {
+  padding-right: 12px;
+
+  @include media(">=desktop") {
+    padding-right: initial;
+  }
+}
+
+.socials-header__icon {
+  transition: inherit;
+
+  &:hover {
+    --color: #{$primary-color};
+  }
+}
+
+.socials-header__link {
+  display: block;
+  transition: inherit;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active,
+  &:focus {
+    .socials-header__icon {
+      --color: #{darken($primary-color, 5%)};
+    }
+  }
+}

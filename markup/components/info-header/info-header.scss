@@ -1,0 +1,86 @@
+.info-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+
+  @include media(">=tablet") {
+    max-width: 450px;
+    margin-bottom: 52px;
+    text-align: left;
+  }
+
+  @include media(">=desktop") {
+    max-width: 650px;
+    padding-left: 115px;
+    margin-bottom: 40px;
+  }
+}
+
+.info-header__location,
+.info-header__title,
+.info-header__description {
+  transition: all 0.3s;
+}
+
+.info-header__location,
+.info-header__description {
+  font-size: 14px;
+  font-weight: 400;
+  color: $primary-color;
+
+  @include media(">=tablet") {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.info-header__location {
+  margin-bottom: 5px;
+  line-height: 1.5;
+
+  @include media(">=tablet") {
+    margin-bottom: 20px;
+  }
+}
+
+.info-header__description {
+  @include padding-x(25px);
+
+  margin-bottom: 35px;
+  line-height: 1.4;
+
+  @include media(">=tablet") {
+    padding-right: 150px;
+    margin-bottom: 50px;
+  }
+
+  @include media(">=desktop") {
+    padding-right: 250px;
+  }
+}
+
+.info-header__title {
+  margin-bottom: 18px;
+  font-family: $headings-font;
+  font-size: 36px;
+  line-height: 42px;
+  color: #fff;
+
+  @include media(">=tablet") {
+    margin-bottom: 22px;
+    font-size: 52px;
+    line-height: 60px;
+  }
+
+  @include media(">=desktop") {
+    margin-bottom: 16px;
+  }
+}
+
+.info-header__button {
+  @include media(">=tablet") {
+    margin-left: initial;
+  }
+}
