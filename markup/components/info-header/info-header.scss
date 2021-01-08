@@ -16,6 +16,22 @@
     padding-left: 115px;
     margin-bottom: 40px;
   }
+
+  &::before {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    display: none;
+    width: 1px;
+    height: 80px;
+    content: "";
+    background-color: #fff;
+    opacity: 0.6;
+
+    @include media(">=desktop") {
+      display: block;
+    }
+  }
 }
 
 .info-header__location,
@@ -28,11 +44,11 @@
 .info-header__description {
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.5;
   color: $primary-color;
 
   @include media(">=tablet") {
     font-size: 16px;
-    line-height: 24px;
   }
 }
 

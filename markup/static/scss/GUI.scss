@@ -1,0 +1,34 @@
+.button {
+  @include padding-x(18px);
+  @include padding-y(12px);
+  @include margin-x(auto);
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $primary-color;
+  transition: all 0.3s;
+
+  &:focus,
+  &:active {
+    background-color: darken($primary-color, 5%);
+  }
+
+  &:hover:not([disabled="disabled"]) {
+    background-color: $primary-color;
+  }
+
+  &[disabled="disabled"] {
+    cursor: not-allowed;
+  }
+
+  @include media(">=tablet") {
+    @include padding-x(40px);
+    @include padding-y(18px);
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

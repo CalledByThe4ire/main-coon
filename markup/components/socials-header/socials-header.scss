@@ -1,44 +1,12 @@
 .socials-header {
-  position: relative;
-  display: block;
+  display: none;
+  flex-flow: row wrap;
+  transition: inherit;
   transition: all 0.5s;
 
-  @include media(">=desktop") {
-    margin-bottom: -95px;
-    transform: translateY(-95px);
-  }
-}
-
-.socials-header__list {
-  display: flex;
-  flex-flow: row wrap;
-  max-width: 450px;
-  transition: inherit;
-
-  @include media(">=desktop") {
-    padding-top: 95px;
-    transform: translateX(-10px);
-  }
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    display: none;
-    width: 1px;
-    height: 70px;
-    content: "";
-    background-color: #fff;
-    opacity: 0.6;
-    transform: translate(-50%);
-
-    @include media(">=desktop") {
-      display: block;
-    }
-  }
-
-  @include media("<=tablet") {
-    display: none;
+  @include media(">=tablet") {
+    display: flex;
+    max-width: 450px;
   }
 
   @include media(">=desktop") {
@@ -46,6 +14,7 @@
     flex-flow: column wrap;
     align-items: center;
     margin-right: auto;
+    transform: translate(-50%);
   }
 }
 
